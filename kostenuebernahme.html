@@ -46,14 +46,14 @@
 
 <main>
 
-  <section class="page-hero">
+  <section class="page-hero reveal">
     <div class="container">
       <h1>Kostenübernahme durch die Krankenkasse</h1>
       <p class="lead">Was zahlt die Kasse für Ihr Hörgerät? Alle Antworten auf einen Blick.</p>
     </div>
   </section>
 
-  <section class="legal">
+  <section class="legal reveal">
     <div class="container legal-content">
       <h2>Zahlt die Krankenkasse?</h2>
       <p>In vielen Fällen haben Versicherte alle sechs Jahre Anspruch auf ein neues Hörgerät. Damit die Krankenkasse die Kosten für ein Hörgerät übernimmt, stellt ein HNO-Arzt bei Bedarf eine entsprechende Verordnung aus.</p>
@@ -145,5 +145,6 @@ Am Brückentor 15
   document.querySelector('.nav-toggle')?.addEventListener('click', function(){ const o=document.body.classList.toggle('nav-open'); this.setAttribute('aria-expanded', o?'true':'false'); });
 </script>
 
+<script src="effects.js" defer></script>
 </body>
 </html>

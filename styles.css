@@ -219,6 +219,52 @@ p{margin:0 0 1em}
 .footer-legal nav{display:flex;gap:20px}
 .footer-legal a:hover{color:#fff}
 
+/* Animations ------------------------------------------ */
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+
+.reveal{opacity:0;will-change:opacity,transform}
+.reveal.in{animation:fadeUp .7s cubic-bezier(.22,.61,.36,1) both}
+.reveal-stagger > *{opacity:0}
+.reveal-stagger.in > *{animation:fadeUp .65s cubic-bezier(.22,.61,.36,1) both}
+.reveal-stagger.in > *:nth-child(1){animation-delay:.05s}
+.reveal-stagger.in > *:nth-child(2){animation-delay:.15s}
+.reveal-stagger.in > *:nth-child(3){animation-delay:.25s}
+.reveal-stagger.in > *:nth-child(4){animation-delay:.35s}
+.reveal-stagger.in > *:nth-child(5){animation-delay:.45s}
+.reveal-stagger.in > *:nth-child(6){animation-delay:.55s}
+
+/* Header scroll state */
+.site-header.is-scrolled{box-shadow:0 6px 16px rgba(0,0,0,.06);border-bottom-color:transparent}
+
+/* Hero parallax + subtle zoom */
+.hero-image{transform:translateZ(0) scale(1.04);transition:transform .3s ease-out}
+.hero{animation:fadeIn .8s ease both}
+.hero-overlay > *{opacity:0;animation:fadeUp .7s cubic-bezier(.22,.61,.36,1) both}
+.hero-overlay > *:nth-child(1){animation-delay:.1s}
+.hero-overlay > *:nth-child(2){animation-delay:.25s}
+.hero-overlay > *:nth-child(3){animation-delay:.4s}
+
+/* Hover micro-interactions */
+.btn{transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s cubic-bezier(.22,.61,.36,1),box-shadow .2s ease}
+.btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(255,43,10,.28)}
+.btn-outline:hover{transform:translateY(-1px)}
+.service-card{transition:transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s ease}
+.service-card img{transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.service-card:hover img{transform:scale(1.03)}
+.split-media img,.team-card img,.product-media img{transition:transform .5s cubic-bezier(.22,.61,.36,1)}
+.split:hover .split-media img,
+.team-card:hover img,
+.product-row:hover .product-media img{transform:scale(1.02)}
+
+/* Reduced motion --------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal,.reveal-stagger > *{opacity:1!important;transform:none!important}
+  .hero-image{transform:none!important}
+}
+
 /* Utility --------------------------------------------- */
 .text-center{text-align:center}
 .mt-0{margin-top:0}

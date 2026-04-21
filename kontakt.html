@@ -46,16 +46,16 @@
 
 <main>
 
-  <section class="page-hero">
+  <section class="page-hero reveal">
     <div class="container">
       <h1>Sie haben Fragen? Wir sind für Sie da.</h1>
       <p class="lead">Rufen Sie uns an, schreiben Sie uns oder kommen Sie einfach vorbei.</p>
     </div>
   </section>
 
-  <section class="section">
+  <section class="section reveal">
     <div class="container">
-      <div class="info-grid">
+      <div class="info-grid reveal-stagger">
         <div class="info-card">
           <h3>Kontakt</h3>
           <p>📞 <a href="tel:+4926512822">02651&nbsp;2822</a></p>
@@ -77,12 +77,12 @@ Am Brückentor 15
     </div>
   </section>
 
-  <section class="section section-soft">
+  <section class="section section-soft reveal">
     <div class="container">
       <div class="section-title">
         <h2>Öffentliche Parkplätze in der Nähe</h2>
       </div>
-      <div class="info-grid">
+      <div class="info-grid reveal-stagger">
         <div class="info-card"><h3>Im Keutel 27</h3><p>56727 Mayen</p></div>
         <div class="info-card"><h3>Bachstraße 32</h3><p>56727 Mayen</p></div>
         <div class="info-card"><h3>Brückenstraße 13</h3><p>56727 Mayen</p></div>
@@ -90,7 +90,7 @@ Am Brückentor 15
     </div>
   </section>
 
-  <section class="section">
+  <section class="section reveal">
     <div class="container" style="max-width:900px">
       <div class="address-block">
         <h3>Kostenloses Probetragen vereinbaren</h3>
@@ -150,5 +150,6 @@ Am Brückentor 15
   document.querySelector('.nav-toggle')?.addEventListener('click', function(){ const o=document.body.classList.toggle('nav-open'); this.setAttribute('aria-expanded', o?'true':'false'); });
 </script>
 
+<script src="effects.js" defer></script>
 </body>
 </html>
