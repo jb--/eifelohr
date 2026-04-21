@@ -39,7 +39,8 @@ p{margin:0 0 1em}
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.5em;
   padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;
-  line-height:1;white-space:nowrap;transition:background .15s ease,transform .15s ease,color .15s ease,border-color .15s ease;
+  line-height:1.2;white-space:normal;text-align:center;max-width:100%;
+  transition:background .15s ease,transform .15s ease,color .15s ease,border-color .15s ease;
 }
 .btn-primary{background:var(--primary);color:#fff}
 .btn-primary:hover{background:var(--primary-hover);color:#fff}
@@ -52,10 +53,9 @@ p{margin:0 0 1em}
 
 /* Header ------------------------------------------------ */
 .site-header{
-  position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);
-  backdrop-filter:saturate(180%) blur(10px);
-  -webkit-backdrop-filter:saturate(180%) blur(10px);
+  position:sticky;top:0;z-index:50;background:#fff;
   border-bottom:1px solid var(--border);
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;height:72px}
 .logo-link{display:inline-flex;align-items:center;flex-shrink:0}
@@ -87,12 +87,18 @@ p{margin:0 0 1em}
 .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.65) 100%);z-index:-1}
 .hero-overlay{width:100%;max-width:var(--container);margin:0 auto;padding:48px 24px;text-align:center}
+@media (max-width:600px){
+  .hero{min-height:70vh}
+  .hero-overlay{padding:32px 20px}
+  .hero-overlay .btn-lg{width:100%;padding:16px 20px;font-size:15px}
+  .btn-lg{padding:16px 24px;font-size:15px}
+}
 .hero h1{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:.25em;letter-spacing:-.01em;color:#fff}
 .hero-sub{font-size:clamp(1rem,1.6vw,1.25rem);opacity:.92;margin-bottom:1.75em;font-weight:500}
 
 /* Page hero (subpages) --------------------------------- */
-.page-hero{padding:96px 0 48px;background:var(--bg-soft);text-align:center}
-.page-hero h1{font-size:clamp(2rem,4vw,3rem);margin-bottom:.3em}
+.page-hero{padding:72px 0 56px;background:var(--bg-soft);text-align:center}
+.page-hero h1{font-size:clamp(1.75rem,3.4vw,2.75rem);margin-bottom:.4em;max-width:900px;margin-left:auto;margin-right:auto;line-height:1.15}
 .page-hero .lead{font-size:1.125rem;color:var(--muted);max-width:720px;margin:0 auto}
 
 /* Split section (image/text) --------------------------- */
@@ -121,7 +127,7 @@ p{margin:0 0 1em}
 @media (max-width:900px){.services{grid-template-columns:1fr;gap:24px;max-width:520px;margin:0 auto}}
 .service-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease}
 .service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
-.service-card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f1efeb}
+.service-card img{width:100%;aspect-ratio:4/3;object-fit:contain;background:#f7f5f2}
 .service-card h3{padding:24px 24px 0;font-size:1.5rem}
 .service-card p{padding:0 24px;color:var(--muted);flex:1}
 .service-card .btn{margin:0 24px 24px;align-self:flex-start}
@@ -157,7 +163,7 @@ p{margin:0 0 1em}
 .product-row:first-of-type{border-top:0}
 .product-row.reverse .product-media{order:2}
 @media (max-width:800px){.product-row{grid-template-columns:1fr;gap:24px;padding:40px 0}.product-row.reverse .product-media{order:0}}
-.product-media img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;background:#f1efeb}
+.product-media img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:contain;background:#f7f5f2}
 .product-body h3{font-size:1.75rem;margin-bottom:.25em}
 .product-body .tagline{color:var(--muted);font-size:1.0625rem;margin-bottom:1.25em}
 .product-body h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:700;margin:1.25em 0 .6em}
@@ -179,7 +185,7 @@ p{margin:0 0 1em}
 .quote{max-width:820px;margin:80px auto 0;text-align:center;font-family:"Manrope",sans-serif;font-size:clamp(1.25rem,2vw,1.625rem);line-height:1.4;color:var(--ink);font-style:italic}
 .quote::before,.quote::after{color:var(--primary);font-weight:700;font-style:normal}
 .quote::before{content:"„"}
-.quote::after{content:"\"\""}
+.quote::after{content:"\201C"}
 
 /* Info / contact columns ------------------------------ */
 .info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}

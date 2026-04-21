@@ -2,4 +2,8 @@
 content-extract.json
 extract-*.json
 reference-*.png
+local-*.png
+mobile-*.png
+_tools/
+og-template.html
 .DS_Store

@@ -6,14 +6,56 @@
 <title>Eifelohr der Akustiker — Hörgeräte, Gehörschutz & In-Ear Monitoring in Mayen und der Eifel</title>
 <meta name="description" content="Eifelohr der Akustiker in Mayen: Hörgeräte, individueller Gehörschutz und In-Ear Monitoring. Persönlich, sympathisch, inhabergeführt. Jetzt kostenlos Probetragen.">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-<meta property="og:title" content="Eifelohr der Akustiker — Mayen & Eifel">
-<meta property="og:description" content="Hörgeräte, Gehörschutz und In-Ear Monitoring in Mayen und der Eifel.">
-<meta property="og:image" content="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<meta name="theme-color" content="#ff2b0a">
+<link rel="canonical" href="https://www.eifelohr.de/">
+<meta property="og:site_name" content="Eifelohr der Akustiker">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://www.eifelohr.de/">
+<meta property="og:title" content="Eifelohr der Akustiker – Hörgeräte, Gehörschutz & In-Ear Monitoring in Mayen & Eifel">
+<meta property="og:description" content="Persönliche Hörakustik in Mayen und der Eifel. Hörgeräte ab 0 € möglich, maßgefertigter Gehörschutz und Custom In-Ears.">
+<meta property="og:image" content="https://www.eifelohr.de/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Eifelohr der Akustiker – Hörgeräte, Gehörschutz & In-Ear Monitoring">
+<meta name="twitter:description" content="Persönliche Hörakustik in Mayen und der Eifel. Hörgeräte ab 0 € möglich, maßgefertigter Gehörschutz und Custom In-Ears.">
+<meta name="twitter:image" content="https://www.eifelohr.de/images/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"HearingAidStore",
+  "name":"Eifelohr der Akustiker",
+  "legalName":"Reinnarth Hörgeräte GmbH",
+  "description":"Hörakustik-Meisterbetrieb in Mayen: Hörgeräte, individueller Gehörschutz und In-Ear Monitoring für Mayen und die Eifel.",
+  "url":"https://www.eifelohr.de/",
+  "logo":"https://www.eifelohr.de/images/logo.png",
+  "image":"https://www.eifelohr.de/images/og-cover.jpg",
+  "telephone":"+49-2651-2822",
+  "email":"hi@eifelohr.de",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"Am Brückentor 15",
+    "postalCode":"56727",
+    "addressLocality":"Mayen",
+    "addressRegion":"Rheinland-Pfalz",
+    "addressCountry":"DE"
+  },
+  "areaServed":["Mayen","Eifel","Koblenz","Rheinland-Pfalz"],
+  "openingHoursSpecification":[{
+    "@type":"OpeningHoursSpecification",
+    "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens":"09:00","closes":"18:00"
+  }],
+  "founder":{"@type":"Person","name":"Johannes Penzel"},
+  "sameAs":[]
+}
+</script>
 </head>
 <body>
 
@@ -168,6 +210,30 @@ Am Brückentor 15
     </nav>
   </div>
 </footer>
+
+<!-- Formbricks (deaktiviert bis ENV_ID gesetzt ist) -->
+<script>
+  window.formbricksConfig = {
+    // Tragen Sie hier Ihre Werte ein, um Formbricks zu aktivieren:
+    environmentId: "",          // z.B. "cl..." aus Formbricks Dashboard
+    apiHost: "https://app.formbricks.com"  // self-hosted: eigene URL
+  };
+  (function () {
+    if (!window.formbricksConfig.environmentId) return;
+    var s = document.createElement("script");
+    s.type = "module";
+    s.src = window.formbricksConfig.apiHost + "/js/formbricks.umd.cjs";
+    s.onload = function () {
+      if (window.formbricks) {
+        window.formbricks.init({
+          environmentId: window.formbricksConfig.environmentId,
+          apiHost: window.formbricksConfig.apiHost
+        });
+      }
+    };
+    document.head.appendChild(s);
+  })();
+</script>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();

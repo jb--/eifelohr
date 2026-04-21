@@ -6,6 +6,22 @@
 <title>Hörgeräte aus der Eifel — Regional. Persönlich. Nah. | Eifelohr</title>
 <meta name="description" content="Eifelohr — Ihr regionaler Hörakustiker in der Eifel. Persönliche Beratung, moderne Hörtechnik, langfristiger Service.">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="images/logo.png">
+<meta name="theme-color" content="#ff2b0a">
+<link rel="canonical" href="https://www.eifelohr.de/fuer-die-region.html">
+<meta property="og:site_name" content="Eifelohr der Akustiker">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://www.eifelohr.de/fuer-die-region.html">
+<meta property="og:title" content="Hörgeräte aus der Eifel – regional, persönlich, nah | Eifelohr">
+<meta property="og:description" content="Als regionaler Hörakustiker in der Eifel stehen wir für Nähe, persönliche Beratung und langfristige Betreuung.">
+<meta property="og:image" content="https://www.eifelohr.de/images/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hörgeräte aus der Eifel – regional, persönlich, nah | Eifelohr">
+<meta name="twitter:description" content="Als regionaler Hörakustiker in der Eifel stehen wir für Nähe, persönliche Beratung und langfristige Betreuung.">
+<meta name="twitter:image" content="https://www.eifelohr.de/images/og-cover.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&family=Poppins:wght@400;500;600;700&display=swap">
@@ -97,6 +113,30 @@ Am Brückentor 15
     <nav aria-label="Rechtliches"><a href="impressum.html">Impressum</a><a href="datenschutz.html">Datenschutz</a></nav>
   </div>
 </footer>
+
+<!-- Formbricks (deaktiviert bis ENV_ID gesetzt ist) -->
+<script>
+  window.formbricksConfig = {
+    // Tragen Sie hier Ihre Werte ein, um Formbricks zu aktivieren:
+    environmentId: "",          // z.B. "cl..." aus Formbricks Dashboard
+    apiHost: "https://app.formbricks.com"  // self-hosted: eigene URL
+  };
+  (function () {
+    if (!window.formbricksConfig.environmentId) return;
+    var s = document.createElement("script");
+    s.type = "module";
+    s.src = window.formbricksConfig.apiHost + "/js/formbricks.umd.cjs";
+    s.onload = function () {
+      if (window.formbricks) {
+        window.formbricks.init({
+          environmentId: window.formbricksConfig.environmentId,
+          apiHost: window.formbricksConfig.apiHost
+        });
+      }
+    };
+    document.head.appendChild(s);
+  })();
+</script>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
