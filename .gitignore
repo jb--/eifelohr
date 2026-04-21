@@ -1,0 +1,5 @@
+.playwright-mcp/
+content-extract.json
+extract-*.json
+reference-*.png
+.DS_Store
